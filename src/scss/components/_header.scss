@@ -1,0 +1,185 @@
+.header {
+  padding: 22.5px 0;
+  margin-bottom: 40px;
+  background-color: var(--background-color);
+
+    @include tablet {
+      margin-bottom: 33px;
+      padding: 24px 0;
+    }
+
+    @include small-tablet {
+      margin-bottom: 0px;
+    }
+
+  &__top {
+    width: 100%;
+    align-items: center;
+  }
+
+  &__container {
+    position: relative;
+    align-items: center;
+  }
+
+  &__logo-top {
+    margin-right: 139px;
+
+    @include tablet {
+      max-width: 166px;
+      margin-right: 81px;
+    }
+
+    @include mobile {
+      max-width: 112px;
+    }
+  }
+
+  &__btn svg {
+    @include mobile {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__btn path{
+    transition-property: fill, transform;
+    transition: 0.3s ease-in-out;
+  }
+  &__btn:focus-visible {
+    outline: none;
+    outline: 1px solid var(--active-color);
+  }
+
+  &__btn:hover:not(:focus-visible) path {
+    fill: var(--btn-color);
+  }
+
+  &__btn:active:not(:focus-visible) path {
+    fill: var(--active-color);
+
+  }
+  //форма поиска
+  &__form {
+    display: flex;
+    max-width: 250px;
+    min-height: 80px;
+    position: absolute;
+    right: 29px;
+    opacity: 0;
+    top: -100px;
+    align-items: center;
+    background-color: var(--background-color);
+    transition: all .5s ease-in-out;
+
+      @include mobile {
+        width: 92%;
+        right: 16px;
+      }
+
+  }
+
+  &__input {
+    width: 100%;
+    display: flex;
+    margin-right: 5px;
+    border: none;
+    border-bottom:  1px solid #E9E9E9;
+    font-family: var(--second-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    align-items: center;
+    background-color: var(--background-color);
+    color: #E9E9E9;
+    transition: color .3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      border-bottom: 1px solid var(--btn-color);
+    }
+
+    &:active {
+      border-bottom: 1px solid var(--active-color);
+    }
+
+      @include mobile {
+        width: 100%;
+      }
+  }
+}
+
+.nav {
+  max-width: 740px;
+  align-items: center;
+  margin-right: auto;
+
+  &__list {
+
+    gap: 78px;
+
+    @include tablet {
+      gap: 33px;
+    }
+
+    @include small-tablet {
+      display: none;
+    }
+
+  }
+
+  &__link {
+    font-family: var(--second-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: var(--light-color);
+    transition: color .3s ease-in-out;
+
+    &:focus {
+      outline: none;
+    }
+
+    @include hover {
+      color: var(--btn-color);
+    }
+
+    &:active {
+      color: var(--active-color);
+    }
+  }
+}
+
+.nav__link.focus-visible {
+  outline: 1px solid var(--hover-color);
+  outline-offset: 5px var(--hover-color);
+  background-color: var(--hover-color);
+}
+
+.search__form_show {
+  max-width: 250px;
+  top: -25px;
+  opacity: 1;
+
+    @include small-tablet {
+      max-width: 343px;
+      min-height: 78px;
+    }
+
+    @include mobile {
+      width: 92%;
+      top: -33px;
+      right: 16px;
+    }
+}
+
+
+
+
+
+

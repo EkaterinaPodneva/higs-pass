@@ -1,0 +1,147 @@
+.about-as {
+  background-color: var(--background-color);
+  padding-top: 30px;
+  padding-bottom: 66px;
+  color: var(--light-color);
+
+    @include tablet {
+      padding-bottom: 76px;
+    }
+
+    @include small-tablet{
+      padding-bottom: 62px;
+    }
+
+    @include mobile {
+      padding-bottom: 57px;
+    }
+
+  &__list {
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__item-left {
+    width: calc(( 100% - 30px ) / 2 );
+    flex: 1;
+    margin-right: 30px;
+
+    @include mobile {
+      width: 100%;
+      margin-right: 0px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__descr-left {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #CACACA;
+
+      @include mobile {
+        font-size: 14px;
+        line-height: 25px;
+      }
+  }
+
+  &__right-img {
+    width: calc(( 100% - 30px ) / 2 );
+    padding-top: 32px;
+
+      @include mobile {
+        width: 100%;
+        padding-top: 0px;
+      }
+  }
+
+  &__img {
+    margin-bottom: 21px;
+  }
+
+  &__descr-right {
+    grid-column: 12 span;
+    margin-bottom: 16px;
+    font-family: var(--second-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 22px;
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 22px;
+      }
+  }
+
+  &__form {
+    max-width: 630px;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+    }
+  }
+
+  &__label {
+    width: 100%;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: column-reverse;
+
+      @include tablet {
+        margin-right: 0px;
+      }
+  }
+
+  &__input {
+    width: 100%;
+    min-height: 53px;
+    padding-left: 22px;
+    background-color: #4A4A4A;
+    color: var(--light-color);
+    border: none;
+    transition: color .3s ease-in-out;
+
+    &:focus {
+      outline: none;
+      outline: 1px solid var(--form-color);
+    }
+
+    &:active {
+      color: #F06666;
+      outline: 1px solid #F06666;
+    }
+
+      @include tablet {
+        width: 73%;
+        margin-bottom: 20px;
+      }
+
+      @include small-tablet {
+        width: 100%;
+      }
+
+      @include mobile {
+        min-height: 40px;
+      }
+  }
+
+  &__input::placeholder {
+    color: #CACACA;
+    transition: color .3s ease-in-out;
+  }
+
+  &__input:hover::-webkit-input-placeholder {
+      color: #FF6E30;
+    }
+
+  &__btn {
+    align-self: flex-start;
+  }
+}
+
+
+
